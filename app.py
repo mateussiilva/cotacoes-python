@@ -43,5 +43,5 @@ class WindowMain():
         print(self.valor)
         print(self.origen)
         print(self.destino)
-    
-window = WindowMain("Cotação", 500,400)
+if __name__ == "__main__":
+    window = WindowMain("Cotação", 500,400)
