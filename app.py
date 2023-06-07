@@ -13,7 +13,7 @@ class WindowMain():
         
         self.root.mainloop()
     def framePrimeiro(self):
-        self.frame =  Frame(self.root)
+        self.frame =  Frame(self.root,largura//2,altura//2)
         
         self.lbl1 = Label(self.frame,text='Valor:')
         self.inp_valor = Entry(self.frame, width=12)
