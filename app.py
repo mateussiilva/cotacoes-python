@@ -7,13 +7,16 @@ from tkinter import ttk
 class WindowMain():
     def __init__(self, titulo, largura, altura):
         self.root = Tk()
+    
+        self.largura = largura
+        self.altura = altura
         self.root.geometry(f"{largura}x{altura}")
         
         self.framePrimeiro()
         
         self.root.mainloop()
     def framePrimeiro(self):
-        self.frame =  Frame(self.root,largura//2,altura//2)
+        self.frame =  Frame(self.root,width=500, height=200)
         
         self.lbl1 = Label(self.frame,text='Valor:')
         self.inp_valor = Entry(self.frame, width=12)
