@@ -1,11 +1,19 @@
-import json
 import requests
+import json
 
+url_base = "https://economia.awesomeapi.com.br/last/"
 
-url = 'https://economia.awesomeapi.com.br/last/BTC-BRL'
+def cotar_moeda():
+    moeda = "BRL-USD"
+    url_final = url_base + moeda
+    response = requests.get(url_final)
+    content_json = response.json()
+    return content_json
 
-MOEDA = 'BTCBRL'
+def testar_conexao(url):
+    status_code = requests.get(url).status_code
+    if status_code != 200:
+        return False
+    return True
 
-response = requests.get(url)
-file_json = response.json()
-print(file_json[MOEDA])
+print(testar_conexao("https://google.com.br"))
